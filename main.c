@@ -104,7 +104,7 @@ static void check_root_removal(const char*);
 
 int main(int argc, char** argv) {
 #if defined(__OpenBSD__)
-  if (pledge("stdio rpath", NULL) == -1) {
+  if (pledge("stdio rpath inet", NULL) == -1) {
     err(1, "pledge");
   }
 #endif
